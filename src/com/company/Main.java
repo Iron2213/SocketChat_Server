@@ -1,35 +1,24 @@
 package com.company;
 
-import java.awt.BorderLayout;
-import java.awt.Dimension;
-import javax.swing.JFrame;
+import javax.swing.*;
+import java.awt.*;
 
 /**
- *
  * @author Andrea Bacci
  * @author andrea00bacci@libero.it
  */
 public class Main {
 
     public static void main(String[] args) {
-        // Creazione oggetto per la finestra principale
+        // Main JFrame
         JFrame frame = new JFrame("Server");
 
-        // Creazione e avvio server
         ControlClass server = new ControlClass();
-        server.startServer();
 
-        /*
-        Finestra principale
+        // I start the server
+        server.startServer(6789);
 
-        Impostazione dimensione preferita
-        Disattivazione possibilità di scrivere e modificare
-        Impostazione layout della finestra
-        Aggiunta del pannello centrale
-        Impostazione operazione default di chiusura
-        Attuazione dimensioni all'interno della finestra
-        Impostazione della finestra come visibile
-        */
+        // Setting up the
         frame.setPreferredSize(new Dimension(300, 300));
         frame.setResizable(false);
         frame.setLayout(new BorderLayout());
